@@ -1,0 +1,341 @@
+/*
+  Initial layout is mobile first, with changes done for desktop afterward.
+
+  The CSS Code is ordered by template area, so there are mutltiple media queries throughout
+*/
+* {
+  box-sizing: border-box;
+  font-family: "Ranade", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+:root {
+  --bg-color: #79e3f6;
+}
+
+h2 {
+  font-family: "Archivo", sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.sea {
+  --bg-color: #79e3f6;
+}
+
+.savanna {
+  --bg-color: #f9e6d1;
+}
+
+.rainforest {
+  --bg-color: #d1f9d7;
+}
+
+.arctic {
+  --bg-color: #d1dcf9;
+}
+
+.layout-box {
+  background-color: var(--bg-color);
+}
+
+/*
+  Initial layout for the mobile view of the component 
+*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 1.2rem;
+  grid-auto-flow: row;
+  grid-template-areas: "numerology" "text";
+  padding-bottom: 10px;
+  width: 100%;
+  min-height: 100dvh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-top: 2.25rem;
+  }
+}
+@media (min-width: 1320px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+.images {
+  grid-area: numerology;
+}
+
+.numbering {
+  grid-area: numerology;
+}
+
+.text {
+  grid-area: text;
+}
+
+.single-image {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+  }
+
+  .images {
+    grid-area: images;
+  }
+
+  .numbering {
+    grid-area: numbering;
+  }
+
+  .version-a {
+    grid-template-areas: "images images images images images . numbering numbering numbering single-image single-image single-image single-image single-image" "images images images images images . text text text single-image single-image single-image single-image single-image";
+  }
+
+  .version-a .single-image {
+    grid-area: single-image;
+    display: block;
+  }
+
+  .version-b {
+    grid-template-areas: ". numbering numbering numbering . . images images images images images images images images" ". text text text . . images images images images images images images images";
+  }
+}
+@media (min-width: 1700px) {
+  .version-a {
+    grid-template-areas: "images images images images images images . numbering numbering numbering single-image single-image single-image single-image" "images images images images images images . text text text single-image single-image single-image single-image";
+  }
+  .version-a .text {
+    padding-right: 6rem;
+  }
+
+  .version-b {
+    grid-template-areas: ". numbering numbering numbering . . images images images images images images images images" ". text text text . . images images images images images images images images";
+  }
+  .version-b .text {
+    padding-right: 6rem;
+  }
+}
+.grid {
+  display: grid;
+}
+
+.image-grid-3-m4 {
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(14, 1fr);
+  gap: 0.5rem;
+}
+.image-grid-3-m4 .image-0 {
+  grid-column: 1/span 6;
+  grid-row: 1/span 4;
+}
+.image-grid-3-m4 .image-1 {
+  grid-column: 7/span 6;
+  grid-row: 2/span 2;
+  aspect-ratio: 1/1;
+}
+.image-grid-3-m4 .image-2 {
+  grid-column: 1/span 6;
+  grid-row: 5/span 2;
+  padding-left: 1rem;
+}
+.image-grid-3-m4 .image-3 {
+  grid-column: 7/span 8;
+  grid-row: 4/span 4;
+}
+
+@media (min-width: 1024px) {
+  .image-grid-3-m4 {
+    grid-template-rows: repeat(11, 63px);
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    row-gap: 1rem;
+  }
+  .image-grid-3-m4 .image-0 {
+    grid-column: 1/span 4;
+    grid-row: 1/span 8;
+  }
+  .image-grid-3-m4 .image-1 {
+    grid-column: 5/span 4;
+    grid-row: 2/span 5;
+    padding-right: 45px;
+  }
+  .image-grid-3-m4 .image-2 {
+    grid-column: 2/span 3;
+    grid-row: 9/span 3;
+    padding-left: 0;
+  }
+  .image-grid-3-m4 .image-3 {
+    display: none;
+  }
+}
+.image-grid-4 {
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
+}
+.image-grid-4 .image-0 {
+  grid-column: 1/span 7;
+  grid-row: 1/span 6;
+}
+.image-grid-4 .image-1 {
+  grid-column: 7/span 5;
+  grid-row: 3/span 5;
+  padding-right: 10px;
+}
+.image-grid-4 .image-2 {
+  grid-column: 1/span 6;
+  grid-row: 7/span 5;
+  padding-left: 2rem;
+}
+.image-grid-4 .image-3 {
+  grid-column: 7/span 5;
+  grid-row: 8/span 5;
+}
+.image-grid-4.image-grid-4-left-top .image-0 {
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .image-grid-4 {
+    grid-template-rows: repeat(11, 73px);
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+  .image-grid-4 .image-0 {
+    grid-column: 1/span 6;
+    grid-row: 1/span 5;
+    margin-left: -45px;
+    padding-right: 45px;
+  }
+  .image-grid-4 .image-1 {
+    grid-column: 6/span 3;
+    grid-row: 3/span 4;
+    padding-right: 0;
+  }
+  .image-grid-4 .image-2 {
+    grid-column: 1/span 5;
+    grid-row: 6/span 4;
+    padding-left: 45px;
+  }
+  .image-grid-4 .image-3 {
+    grid-column: 6/span 3;
+    grid-row: 7/span 4;
+    padding-right: 45px;
+  }
+}
+.numbering {
+  justify-self: center;
+  align-self: center;
+}
+
+.numbering-box {
+  width: 140px;
+  height: 140px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Times New Roman";
+}
+
+.numbering-no-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: var(--bg-color);
+  padding-bottom: 25px;
+  align-self: stretch;
+  justify-content: flex-end;
+}
+
+.numbering-no-text {
+  transform: rotate(-90deg);
+  font-size: 1.65rem;
+  font-family: "Times New Roman";
+}
+
+.numbering-text-text {
+  color: var(--bg-color);
+  font-weight: 700;
+  line-height: 0.5;
+  font-size: 154px;
+  font-family: "Times New Roman";
+}
+
+@media (min-width: 1024px) {
+  .numbering {
+    align-self: end;
+    justify-self: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .single-image {
+    grid-area: single-image;
+    aspect-ratio: 1/1;
+    padding-left: 3.75rem;
+    align-self: center;
+  }
+
+  .image-5 {
+    max-width: none;
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+}
+.text {
+  align-self: top;
+  padding-right: 1rem;
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+.text h2 {
+  font-size: 2.45rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.version-a .text {
+  padding-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .text h2 {
+    margin-bottom: 1.25rem;
+    padding-top: 0.5rem;
+  }
+}
+@media (min-width: 1320px) {
+  .text h2 {
+    font-size: 48px;
+  }
+}
