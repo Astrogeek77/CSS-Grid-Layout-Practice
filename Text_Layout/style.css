@@ -14,7 +14,7 @@ div > *:is(h2) {
   color: #fff;
   margin-inline: auto;
   font-weight: 400;
-  font-size: 2rem;  
+  font-size: 2rem;
   margin-block: 0;
   margin-bottom: 1rem;
   /* width: 100vw; */
@@ -98,4 +98,17 @@ div > *:is(h2) {
 .main-with-sidebar > :last-child {
   flex-basis: 300px;
   flex-grow: 1;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-inline: auto;
+  text-decoration: none;
+  cursor: pointer;
 }
