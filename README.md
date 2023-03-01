@@ -1,6 +1,21 @@
 # learn-grid-the-easy-way
 # CSS-Grid-Layout-Practice
 
-[Layout Design way 1](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/index.html)
+[Magazine Layout Design way 1](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Magazine_Layout/index.html)
 <br>
-[Layout Design way 2](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/layout-2.html)
+[Magazine Layout Design way 2](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Magazine_Layout/layout-2.html)
+<br>
+[Website Layout Design](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Website_Layout/website.html)
+<br>
+
+
+# Web_Dev_2023
+
+
+|  #  |            Layout / Code             | Live Demo |
+| :-: | :----------------------------: | :-------: |
+| 01  |       [Magazine Layout Design way 1](https://github.com/Astrogeek77/CSS-Grid-Layout-Practice/tree/main/Magazine_Layout/index.html)       | [demo](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Magazine_Layout/index.html)
+| 02  |       [Magazine Layout Design way 2](https://github.com/Astrogeek77/CSS-Grid-Layout-Practice/tree/main/Magazine_Layout/layout-2.html)       | [demo](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Magazine_Layout/layout-2.html)
+| 03  |       [Website Layout Design 2](https://github.com/Astrogeek77/CSS-Grid-Layout-Practice/tree/main/Website_Layout/website.html)       | [demo](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Website_Layout/website.html)
+| 02  |       [Magazine Layout Design way 2](https://github.com/Astrogeek77/CSS-Grid-Layout-Practice/tree/main/Magazine_Layout/layout-2.html)       | [demo](https://astrogeek77.github.io/CSS-Grid-Layout-Practice/Magazine_Layout/layout-2.html)
+
