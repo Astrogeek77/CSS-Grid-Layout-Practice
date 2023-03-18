@@ -1,0 +1,50 @@
+/* Background Styles Only */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.side-links {
+  font-family: Raleway, sans-serif;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.side-link i {
+  display: none;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px !important;
+  color: white;
+  width: 120px;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+
+.side-link-website {
+  background-color: #f2fa;
+}
+
+.side-link-linkedin {
+  background-color: #1da1f2aa;
+}
+
+.side-link-github {
+  background-color: #6e5494aa;
+}
+
+.side-link-text {
+  /* margin-left: 10px; */
+  /* font-size: 18px; */
+}
+
+.side-link-icon {
+  color: white;
+  /* font-size: 30px; */
+}
