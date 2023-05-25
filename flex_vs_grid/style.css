@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #aaa;
+  padding: 1rem;
+}
+
+.box {
+  text-align: justified;
+}
+
+.box > img {
+  width: 100%;
+  /*   max-width: 500px; */
+  margin: 0 auto;
+  height: 150px;
+  object-fit: center;
+}
+
+.box > h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.box > h2 > a {
+  color: darkgreen;
+  text-underline-offset: 0.125rem;
+  transition: color 500ms ease-in-out;
+}
+
+.box > h2 > a:is(:hover, :focus, :active) {
+  color: purple;
+}
+
+.wrapper {
+  background: #eee;
+  min-height: 200px;
+  border: 4px solid darkgreen;
+  height: fit-content;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.wrapper.flex {
+  display: flex;
+  gap: 1rem;
+  /*   flex-basis: 200px; */
+  flex-wrap: wrap;
+}
+
+.wrapper.flex > * {
+  flex: 1 1 200px;
+}
+
+.wrapper.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
